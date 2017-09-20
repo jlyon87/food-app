@@ -11,8 +11,8 @@ router.get("/js/app.js", function(req, res) {
 	res.sendFile( path.join(__dirname, "../app", "assets", "js", "app.js"));
 });
 
-router.get("/js/google-places-api.js", function(req, res) {
-	res.sendFile( path.join(__dirname, "../app", "assets", "js", "google-places-api.js"));
+router.get("/js/mapbox-api.js", function(req, res) {
+	res.sendFile( path.join(__dirname, "../app", "assets", "js", "mapbox-api.js"));
 });
 
 module.exports = router;
