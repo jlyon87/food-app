@@ -23,3 +23,5 @@ router.get("/favicon5.ico", function(req, res) {
 router.get("/*", function(req, res) {
 	res.sendFile( path.join(__dirname, "app", "index.html") );
 });
+
+module.exports = router;
