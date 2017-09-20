@@ -8,20 +8,18 @@ router.use(function timeLog(req, res, next) {
 	next();
 });
 
-const resources = require("routes/resource-router.js");
-const pages = require("routes/page-router.js");
+const resources = require("./routes/resource-router.js");
 
-router.use("/assets", resources);
 router.use("/assets", resources);
 
 router.get("/", function(req, res) {
-	res.sendFile( path.join(__dirname, "index.html") );
+	res.sendFile( path.join(__dirname, "app", "index.html") );
 });
 
 router.get("/favicon5.ico", function(req, res) {
-	res.sendFile( path.join(__dirname, "assets", "images", "favicon5.ico"));
+	res.sendFile( path.join(__dirname, "app", "assets", "images", "favicon5.ico"));
 });
 
 router.get("/*", function(req, res) {
-	res.sendFile( path.join(__dirname, "index.html") );
+	res.sendFile( path.join(__dirname, "app", "index.html") );
 });

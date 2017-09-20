@@ -1,5 +1,5 @@
 "use strict";
-const express = requre("express");
+const express = require("express");
 const path = require("path");
 const router = express.Router();
 
@@ -14,3 +14,5 @@ router.get("/js/app.js", function(req, res) {
 router.get("/js/google-places-api.js", function(req, res) {
 	res.sendFile( path.join(__dirname, "assets", "js", "google-places-api.js"));
 });
+
+module.exports = router;
